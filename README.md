@@ -20,7 +20,7 @@ This project is a Node.js Web API following Clean Architecture and Clean Code pr
    docker-compose up --build
    ```
 
-3. The application will be available at `http://localhost:3000`.
+3. The application will be available at `http://localhost:5500`.
 
 ## Project Structure
 

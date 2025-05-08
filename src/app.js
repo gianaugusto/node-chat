@@ -1,5 +1,6 @@
 const express = require('express');
 const bodyParser = require('body-parser');
+const eenv = require('dotenv').config();
 const db = require('./config/db');
 const UserController = require('./controllers/UserController');
 const MessageController = require('./controllers/MessageController');
@@ -25,7 +26,7 @@ const messageController = new MessageController(messageService);
 app.use('/users', userRoutes(userController));
 app.use('/messages', messageRoutes(messageController));
 
-const PORT = process.env.PORT || 3000;
+const PORT = process.env.PORT || 5500;
 app.listen(PORT, () => {
   console.log(`Server is running on port ${PORT}`);
 });
