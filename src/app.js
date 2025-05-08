@@ -11,8 +11,15 @@ const MessageRepository = require('./repositories/MessageRepository');
 const userRoutes = require('./routes/userRoutes');
 const messageRoutes = require('./routes/messageRoutes');
 
+// swagger
+const swaggerUi = require('swagger-ui-express');
+const swaggerSpec = require('./routes/swagger');
+
+// express app
 const app = express();
+
 app.use(bodyParser.json());
+app.use('/api-docs', swaggerUi.serve, swaggerUi.setup(swaggerSpec));
 
 const userRepository = new UserRepository(db);
 const messageRepository = new MessageRepository(db);
