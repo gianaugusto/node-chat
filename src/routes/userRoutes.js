@@ -1,5 +1,10 @@
 const express = require('express');
-const router = express.Router();
+
+/**
+ * Export a function that receives a controller and returns a configured router
+ */
+module.exports = (controller) => {
+  const router = express.Router();
 
 /**
  * @swagger
