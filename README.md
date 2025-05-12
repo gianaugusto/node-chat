@@ -11,7 +11,7 @@ This project is a Node.js Web API following Clean Architecture and Clean Code pr
 
 1. Clone the repository:
    ```sh
-   git clone https://github.com/yourusername/node-chat.git
+   git clone https://github.com/gianaugusto/node-chat.git
    cd node-chat
    ```
 
