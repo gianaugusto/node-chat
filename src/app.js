@@ -1,6 +1,8 @@
 const express = require('express');
 const bodyParser = require('body-parser');
-const eenv = require('dotenv').config();
+
+require('dotenv').config();
+
 const db = require('./config/db');
 const UserController = require('./controllers/UserController');
 const MessageController = require('./controllers/MessageController');
@@ -36,6 +38,7 @@ app.use('/messages', messageRoutes(messageController));
 const PORT = process.env.PORT || 5500;
 app.listen(PORT, () => {
   console.log(`Server is running on port ${PORT}`);
+  console.log(`API docs available at http://localhost:${PORT}/api-docs`);
 });
 
 module.exports = app;
